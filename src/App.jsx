@@ -1,5 +1,4 @@
-import React, { useState } from "react";
-import "./App.css";
+import React, { useEffect, useState } from "react";
 import Header from "./components/Header";
 import axios from "axios";
 
@@ -15,7 +14,11 @@ const App = () => {
 
   return (
     <div>
-      <button onClick={movieData}>click me for data retrival</button>
+      <Header />
+      <button onClick={movieData} className=" text-yellow-200 ">
+        click me for data retrival
+      </button>
+
       <ul>
         {arr.map((e) => {
           return (
